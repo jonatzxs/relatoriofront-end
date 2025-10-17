@@ -1,66 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Interativo</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Nippon X — Anime News</title>
+  <meta name="description" content="Portal de notícias sobre animes, mangás e cultura pop japonesa. Resenhas, trailers, lançamentos e muito mais." />
+  <meta name="author" content="Nippon X" />
+
+  <!-- SEO e redes sociais -->
+  <meta property="og:title" content="Nippon X — Anime News" />
+  <meta property="og:description" content="As últimas novidades do mundo dos animes e mangás." />
+  <meta property="og:image" content="nippon-x-logo.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Meu Site Interativo</h1>
-    <button id="menu-btn">☰</button>
-    <nav id="menu">
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#artigos">Artigos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+  <header class="site-header" role="banner">
+    <div class="header-inner container">
+      <a class="brand" href="#" aria-label="Página inicial Nippon X">
+        <img src="nippon-x-logo.jpg" alt="Nippon X Logo" class="logo" />
+      </a>
+
+      <nav class="header-controls" aria-label="Controles principais">
+        <input id="searchInput" type="search" placeholder="Buscar animes, personagens..." aria-label="Buscar conteúdo" />
+        <select id="sortSelect" aria-label="Ordenar resultados">
+          <option value="newest">Mais recentes</option>
+          <option value="oldest">Mais antigos</option>
+          <option value="title_az">Títulos A–Z</option>
+          <option value="title_za">Títulos Z–A</option>
+        </select>
+        <button id="themeToggle" aria-pressed="false" title="Alternar tema">🌙</button>
+        <button id="adminBtn" class="btn small admin-btn" title="Painel administrativo">Admin</button>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="sobre">
-      <h2>Sobre</h2>
-      <p>Este site tem interações em JavaScript: menu, formulário validado e botão voltar ao topo.</p>
+  <main id="main-content">
+    <!-- Sobre -->
+    <section id="sobre" class="container section reveal" tabindex="-1">
+      <div class="sobre-inner">
+        <h1>Nippon X</h1>
+        <p>Portal de notícias sobre animes, mangás e cultura pop japonesa — resenhas, trailers e lançamentos.</p>
+      </div>
     </section>
 
-    <section id="artigos">
-      <h2>Artigos</h2>
-      <article>
-        <h3>Artigo 1</h3>
-        <p>Texto exemplo de artigo.</p>
-      </article>
-      <article>
-        <h3>Artigo 2</h3>
-        <p>Outro texto de exemplo.</p>
+    <!-- Destaque -->
+    <section id="destaque" class="container section reveal destaque-section" aria-labelledby="destaqueTitle">
+      <article class="destaque-card">
+        <div class="destaque-cover" id="destaqueCover" role="img" aria-label="Capa do destaque"></div>
+        <div class="destaque-body">
+          <span class="badge">Em Destaque</span>
+          <h2 id="destaqueTitle">Demon Slayer — Arco da Vila dos Ferreiros</h2>
+          <p id="destaqueSynopsis">
+            Tanjiro e os caçadores enfrentam novos desafios na Vila dos Ferreiros — batalhas intensas e revelações sobre as técnicas dos ferreiros.
+          </p>
+          <ul class="destaque-meta">
+            <li><strong>Estúdio:</strong> Ufotable</li>
+            <li><strong>Data de estreia:</strong> 2025</li>
+            <li><strong>Onde assistir:</strong> Crunchyroll</li>
+          </ul>
+          <div class="destaque-actions">
+            <button class="btn primary" id="abrirTrailerBtn">Assistir trailer</button>
+          </div>
+
+          <div id="destaqueTrailer" class="destaque-trailer" hidden>
+            <iframe
+              loading="lazy"
+              src=""
+              title="Trailer Demon Slayer — Arco da Vila dos Ferreiros"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+            <div class="trailer-controls">
+              <button class="btn small" id="fecharTrailerBtn">Fechar</button>
+            </div>
+          </div>
+        </div>
       </article>
     </section>
 
-    <section id="contato">
-      <h2>Contato</h2>
-      <form id="form-contato">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome">
+    <!-- Artigos -->
+    <section id="artigos" class="container section" tabindex="-1">
+      <div class="controls-bar top-controls">
+        <div class="filter-group">
+          <label for="filterGenre">Gênero:</label>
+          <select id="filterGenre">
+            <option value="all">Todos</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filterStudio">Estúdio:</label>
+          <select id="filterStudio">
+            <option value="all">Todos</option>
+          </select>
+        </div>
+        <div class="filter-group checkbox-group">
+          <label>
+            <input type="checkbox" id="showFeaturedOnly" />
+            Apenas destaques
+          </label>
+        </div>
+      </div>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email">
+      <h2 class="section-title">Últimas notícias</h2>
+      <div id="grid" class="grid reveal-grid" aria-live="polite"></div>
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem"></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
-      <p id="msg"></p>
+      <div class="load-more-wrap">
+        <button id="loadMoreBtn" class="btn">Carregar mais</button>
+        <button id="backToTop" class="btn small" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+      </div>
     </section>
   </main>
 
-  <button id="topo-btn">↑ Topo</button>
+  <!-- Modais -->
+  <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content" role="document">
+      <button id="modalClose" class="modal-close" aria-label="Fechar">✕</button>
+      <div id="modalBody"></div>
+      <div class="modal-actions">
+        <button id="copyLinkBtn" class="btn small">Copiar link</button>
+        <button id="openInNewBtn" class="btn small">Abrir no YouTube</button>
+      </div>
+    </div>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 - Site Interativo</p>
+  <!-- Painel Admin -->
+  <div id="adminModal" class="modal admin-modal" hidden role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+    <div class="modal-content" role="document">
+      <button id="adminClose" class="modal-close" aria-label="Fechar painel">✕</button>
+      <h3 id="adminTitle">Painel Administrativo</h3>
+
+      <div id="adminLoginBox" class="admin-login">
+        <p>Digite a senha para acessar o painel:</p>
+        <input id="adminPassword" type="password" placeholder="Senha" aria-label="Senha de administrador" />
+        <div class="admin-login-actions">
+          <button id="adminLoginBtn" class="btn primary">Entrar</button>
+          <button id="adminCancelLogin" class="btn small">Cancelar</button>
+        </div>
+      </div>
+
+      <form id="adminForm" class="admin-form" hidden aria-label="Formulário administrativo">
+        <label for="adminTitleField">Título:</label>
+        <input id="adminTitleField" required />
+
+        <label for="adminSynopsis">Sinopse:</label>
+        <textarea id="adminSynopsis" required></textarea>
+
+        <label for="adminCover">Capa:</label>
+        <input id="adminCover" placeholder="https://..." required />
+
+        <label for="adminPremiere">Data de estreia:</label>
+        <input id="adminPremiere" placeholder="2025" />
+
+        <label for="adminGenres">Gêneros:</label>
+        <input id="adminGenres" placeholder="Ação, Fantasia" />
+
+        <label for="adminStudio">Estúdio:</label>
+        <input id="adminStudio" />
+
+        <label for="adminWhere">Plataforma:</label>
+        <input id="adminWhere" />
+
+        <label for="adminTrailer">Trailer:</label>
+        <input id="adminTrailer" placeholder="https://www.youtube.com/watch?v=ID" />
+
+        <label for="adminCharacters">Personagens:</label>
+        <input id="adminCharacters" placeholder="Nome1, Nome2" />
+
+        <label>
+          <input id="adminFeatured" type="checkbox" />
+          Marcar como destaque
+        </label>
+
+        <div class="admin-actions">
+          <button id="adminSaveBtn" class="btn primary">Salvar</button>
+          <button id="adminClearBtn" class="btn small" type="button">Limpar</button>
+          <button id="adminLogoutBtn" class="btn small" type="button">Sair</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toasts -->
+  <div id="toasts" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Nippon X — Todos os direitos reservados.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

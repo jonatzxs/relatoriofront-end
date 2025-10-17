@@ -1,9 +1,3 @@
-/* style.css - Paleta principal: vermelho
-   Atualizado com modo dark aprimorado, responsividade e animações profissionais.
-   Alterações: logo ajustada para 50px; texto do destaque branco no modo dark.
-   Salvar como style.css no mesmo diretório do index.html.
-*/
-
 /* ============================
    Variáveis e reset básico
    ============================ */
@@ -130,7 +124,7 @@ body {
   text-decoration: none;
 }
 .logo {
-  height: 50px; /* Alterado de 44px para 50px */
+  height: 90px; /* Ajustado para 90px conforme solicitado */
   width: auto;
   display: block;
   border-radius: 8px;
@@ -284,6 +278,9 @@ body {
   color: var(--neutral-600);
   font-size: 0.95rem;
   padding-left: 0;
+}
+.destaque-meta strong {
+  color: var(--neutral-900);
 }
 .destaque-actions {
   margin-top: auto;
@@ -637,12 +634,20 @@ body[data-theme="dark"] #sobre h1 {
 }
 body[data-theme="dark"] .destaque-body h2,
 body[data-theme="dark"] .destaque-body p,
-body[data-theme="dark"] .destaque-meta {
-  color: var(--dark-text); /* Texto do destaque branco no modo dark */
+body[data-theme="dark"] .destaque-meta,
+body[data-theme="dark"] .destaque-meta * {
+  color: var(--dark-text) !important; /* Força todos os elementos dentro de .destaque-meta, incluindo <strong>, a serem brancos no modo dark */
 }
 body[data-theme="dark"] .admin-btn {
   border-color: var(--red-400);
   color: var(--red-400);
+}
+body[data-theme="dark"] .btn {
+  color: var(--dark-text); /* Texto dos botões branco no modo dark */
+}
+body[data-theme="dark"] #loadMoreBtn,
+body[data-theme="dark"] #backToTop {
+  border-color: var(--dark-border); /* Bordas dos botões ajustadas no modo dark */
 }
 
 /* ============================

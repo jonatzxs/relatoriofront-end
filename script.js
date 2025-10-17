@@ -72,7 +72,7 @@ let articles = [
     id: 6,
     title: "Mushoku Tensei: Jobless Reincarnation Temporada 3",
     synopsis: "Rudeus Greyrat avança em sua vida reencarnada — lidando com crescimento pessoal, magia e relacionamentos em um mundo de fantasia.",
-    cover: "https://static.wikia.nocookie.net/dublagem/images/e/e4/Mushoku_Tensei-_Jobless_ReincarnatioN.jpg/revision/latest?cb=20210810171227&path-prefix=pt-br",
+    cover: "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3670470005126522090",
     premiere: "Abril de 2026",
     genres: ["Fantasia", "Aventura", "Isekai"],
     studio: "Studio Bind",
@@ -85,7 +85,7 @@ let articles = [
     id: 7,
     title: "Fire Force Temporada 3 - Parte 2 (Final)",
     synopsis: "Shinra e a Brigada de Incêndio concluem a luta contra os infernais e o culto do Evangelista — revelando segredos sobre o mundo.",
-    cover: "https://a.storyblok.com/f/178900/1000x1500/187c57b286/fire-force-season-3-base-assets-2x3.png/m/filters:quality(95)format(webp)",
+    cover: "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3705823249097986823",
     premiere: "Janeiro de 2026",
     genres: ["Ação", "Ficção Científica", "Shonen"],
     studio: "David Production",
@@ -185,13 +185,25 @@ function initTheme() {
   const savedTheme = localStorage.getItem("theme") || "light";
   document.body.dataset.theme = savedTheme;
   themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+  updateLogo(savedTheme); // Atualiza a logo inicial baseada no tema salvo
 }
 themeToggle.addEventListener("click", () => {
   const newTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
   document.body.dataset.theme = newTheme;
   localStorage.setItem("theme", newTheme);
   themeToggle.textContent = newTheme === "dark" ? "☀️" : "🌙";
+  updateLogo(newTheme); // Atualiza a logo quando o tema muda
 });
+
+// Função para atualizar a logo com base no tema
+function updateLogo(theme) {
+  const logoImage = document.getElementById("logoImage");
+  if (theme === "light") {
+    logoImage.src = "nippon_x_logo.png";
+  } else {
+    logoImage.src = "nippon-x-logo.jpg";
+  }
+}
 
 // Inicializar filtros de gênero e estúdio
 function initFilters() {

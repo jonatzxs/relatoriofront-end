@@ -8,7 +8,7 @@
   <meta name="author" content="Nippon X" />
   <meta property="og:title" content="Nippon X — Anime News" />
   <meta property="og:description" content="As últimas novidades do mundo dos animes e mangás." />
-  <meta property="og:image" content="nippon-x-logo.jpg" />
+  <meta property="og:image" content="nippon_x_logo.png" /> <!-- Inicial para light mode; pode ser atualizado via JS se necessário -->
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
@@ -17,7 +17,7 @@
   <header class="site-header" role="banner">
     <div class="header-inner container">
       <a class="brand" href="#" aria-label="Página inicial Nippon X">
-        <img src="nippon-x-logo.jpg" alt="Nippon X Logo" class="logo" />
+        <img src="nippon_x_logo.png" alt="Nippon X Logo" class="logo" id="logoImage" /> <!-- Adicionado id para fácil referência no JS -->
       </a>
 
       <nav class="header-controls" aria-label="Controles principais">
@@ -34,30 +34,29 @@
     </div>
   </header>
 
-    <!-- Destaque -->
-    <section id="destaque" class="container section reveal destaque-section" aria-labelledby="destaqueTitle">
-      <article class="destaque-card">
-        <div class="destaque-cover" id="destaqueCover" role="img" aria-label="Capa do destaque"></div>
-        <div class="destaque-body">
-          <span class="badge">Em Destaque</span>
-          <h2 id="destaqueTitle"></h2>
-          <p id="destaqueSynopsis"></p>
-          <ul class="destaque-meta"></ul>
-          <div class="destaque-actions">
-            <button class="btn primary" id="abrirTrailerBtn">Assistir trailer</button>
-          </div>
+  <!-- Destaque -->
+  <section id="destaque" class="container section reveal destaque-section" aria-labelledby="destaqueTitle">
+    <article class="destaque-card">
+      <div class="destaque-cover" id="destaqueCover" role="img" aria-label="Capa do destaque"></div>
+      <div class="destaque-body">
+        <span class="badge">Em Destaque</span>
+        <h2 id="destaqueTitle"></h2>
+        <p id="destaqueSynopsis"></p>
+        <ul class="destaque-meta"></ul>
+        <div class="destaque-actions">
+          <button class="btn primary" id="abrirTrailerBtn">Assistir trailer</button>
+        </div>
 
-          <div id="destaqueTrailer" class="destaque-trailer" hidden>
-            <iframe
-              loading="lazy"
-              src=""
-              title=""
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-            <div class="trailer-controls">
-              <button class="btn small" id="fecharTrailerBtn">Fechar</button>
-            </div>
+        <div id="destaqueTrailer" class="destaque-trailer" hidden>
+          <iframe
+            loading="lazy"
+            src=""
+            title=""
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <div class="trailer-controls">
+            <button class="btn small" id="fecharTrailerBtn">Fechar</button>
           </div>
         </div>
       </article>
@@ -94,7 +93,6 @@
         <button id="backToTop" class="btn small" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
       </div>
     </section>
-  </main>
 
   <!-- Modais -->
   <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">

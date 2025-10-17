@@ -3,18 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Nippon X — Anime News</title>
   <meta name="description" content="Portal de notícias sobre animes, mangás e cultura pop japonesa. Resenhas, trailers, lançamentos e muito mais." />
   <meta name="author" content="Nippon X" />
-
-  <!-- SEO e redes sociais -->
   <meta property="og:title" content="Nippon X — Anime News" />
   <meta property="og:description" content="As últimas novidades do mundo dos animes e mangás." />
   <meta property="og:image" content="nippon-x-logo.jpg" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -39,30 +34,15 @@
     </div>
   </header>
 
-  <main id="main-content">
-    <!-- Sobre -->
-    <section id="sobre" class="container section reveal" tabindex="-1">
-      <div class="sobre-inner">
-        <h1>Nippon X</h1>
-        <p>Portal de notícias sobre animes, mangás e cultura pop japonesa — resenhas, trailers e lançamentos.</p>
-      </div>
-    </section>
-
     <!-- Destaque -->
     <section id="destaque" class="container section reveal destaque-section" aria-labelledby="destaqueTitle">
       <article class="destaque-card">
         <div class="destaque-cover" id="destaqueCover" role="img" aria-label="Capa do destaque"></div>
         <div class="destaque-body">
           <span class="badge">Em Destaque</span>
-          <h2 id="destaqueTitle">Demon Slayer — Arco da Vila dos Ferreiros</h2>
-          <p id="destaqueSynopsis">
-            Tanjiro e os caçadores enfrentam novos desafios na Vila dos Ferreiros — batalhas intensas e revelações sobre as técnicas dos ferreiros.
-          </p>
-          <ul class="destaque-meta">
-            <li><strong>Estúdio:</strong> Ufotable</li>
-            <li><strong>Data de estreia:</strong> 2025</li>
-            <li><strong>Onde assistir:</strong> Crunchyroll</li>
-          </ul>
+          <h2 id="destaqueTitle"></h2>
+          <p id="destaqueSynopsis"></p>
+          <ul class="destaque-meta"></ul>
           <div class="destaque-actions">
             <button class="btn primary" id="abrirTrailerBtn">Assistir trailer</button>
           </div>
@@ -71,7 +51,7 @@
             <iframe
               loading="lazy"
               src=""
-              title="Trailer Demon Slayer — Arco da Vila dos Ferreiros"
+              title=""
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
             </iframe>
@@ -166,7 +146,7 @@
         <input id="adminWhere" />
 
         <label for="adminTrailer">Trailer:</label>
-        <input id="adminTrailer" placeholder="https://www.youtube.com/watch?v=ID" />
+        <input id="adminTrailer" placeholder="https://www.youtube.com/embed/ID" />
 
         <label for="adminCharacters">Personagens:</label>
         <input id="adminCharacters" placeholder="Nome1, Nome2" />

@@ -5,28 +5,132 @@
 let articles = [
   {
     id: 1,
-    title: "Demon Slayer — Arco da Vila dos Ferreiros",
-    synopsis: "Tanjiro e os caçadores enfrentam novos desafios na Vila dos Ferreiros — batalhas intensas e revelações sobre as técnicas dos ferreiros.",
-    cover: "destaque.jpg",
-    premiere: "2025",
-    genres: ["Ação", "Fantasia"],
-    studio: "Ufotable",
+    title: "Jujutsu Kaisen Temporada 3",
+    synopsis: "A temporada adapta o arco \"The Culling Game\", onde Yuji Itadori e outros feiticeiros participam de um jogo mortal de extermínio para sobreviver e desvendar conspirações.",
+    cover: "https://cdn.shopify.com/s/files/1/0689/6061/6685/files/20250901_jjkS3_poster.jpg?v=1756708446",
+    premiere: "Janeiro de 2026",
+    genres: ["Ação", "Sobrenatural", "Shonen"],
+    studio: "MAPPA",
     where: "Crunchyroll",
-    trailer: "https://www.youtube.com/embed/VIDEO_ID_1",
-    characters: ["Tanjiro", "Nezuko"],
+    trailer: "https://www.youtube.com/embed/OZrfF6F4vmg",
+    characters: ["Yuji Itadori", "Megumi Fushiguro", "Yuta Okkotsu"],
     featured: true,
   },
   {
     id: 2,
-    title: "Jujutsu Kaisen — Temporada 3",
-    synopsis: "Yuji Itadori enfrenta novas maldições enquanto segredos do passado são revelados.",
-    cover: "jujutsu.jpg",
-    premiere: "2026",
-    genres: ["Ação", "Sobrenatural"],
+    title: "Frieren: Beyond Journey's End Temporada 2",
+    synopsis: "A elfa maga Frieren continua sua jornada pós-derrota do Rei Demônio — refletindo sobre o tempo, a perda e novas aventuras com companheiros humanos.",
+    cover: "https://a.storyblok.com/f/178900/1528x2160/9c32d48ef2/frieren-beyond-journeys-end-season-2-key-visual.jpg/m/filters:quality(95)format(webp)",
+    premiere: "16 de janeiro de 2026",
+    genres: ["Fantasia", "Aventura", "Drama"],
+    studio: "Madhouse",
+    where: "Crunchyroll",
+    trailer: "https://www.youtube.com/embed/zRwXbbySVJk",
+    characters: ["Frieren", "Fern", "Stark", "Himmel"],
+    featured: false,
+  },
+  {
+    id: 3,
+    title: "Hell's Paradise: Jigokuraku Temporada 2",
+    synopsis: "Gabimaru e os criminosos prosseguem na ilha misteriosa em busca do elixir da imortalidade — enfrentando horrores sobrenaturais e traições.",
+    cover: "https://static0.srcdn.com/wordpress/wp-content/uploads/2023/05/hell-s-paradise-anime-poster.jpg?q=49&fit=contain&w=480&dpr=2",
+    premiere: "Janeiro de 2026",
+    genres: ["Ação", "Fantasia Sombria", "Seinen"],
     studio: "MAPPA",
     where: "Crunchyroll",
-    trailer: "https://www.youtube.com/embed/VIDEO_ID_2",
-    characters: ["Yuji", "Megumi"],
+    trailer: "https://www.youtube.com/embed/GPgyVaRWFFM",
+    characters: ["Gabimaru", "Sagiri", "Yuzuriha", "Shion"],
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "Bleach: Thousand-Year Blood War - Cour 4 (Final)",
+    synopsis: "O capítulo final da guerra milenar entre shinigamis e quincies — com Ichigo Kurosaki liderando a batalha épica contra Yhwach.",
+    cover: "https://preview.redd.it/new-key-visual-for-bleach-thousand-year-blood-war-part-4-v0-1pjofbgofyaf1.jpeg?width=640&crop=smart&auto=webp&s=1c77ca00af2d2ca19b1b072958ae34e6473b5666",
+    premiere: "2026 (provável outono)",
+    genres: ["Ação", "Sobrenatural", "Shonen"],
+    studio: "Studio Pierrot",
+    where: "Crunchyroll (baseado em temporadas anteriores)",
+    trailer: "https://www.youtube.com/embed/HL3eTEn0KXE",
+    characters: ["Ichigo Kurosaki", "Rukia Kuchiki", "Renji Abarai", "Byakuya Kuchiki"],
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "Oshi no Ko Temporada 3",
+    synopsis: "Continua a saga de vingança e fama no mundo das idols — com Aqua e Ruby desvendando mistérios familiares e escândalos da indústria.",
+    cover: "https://static.wikia.nocookie.net/oshi_no_ko/images/1/17/Season_3_Key_Visual.png/revision/latest?cb=20241006115333",
+    premiere: "Janeiro de 2026",
+    genres: ["Drama", "Mistério", "Sobrenatural"],
+    studio: "Doga Kobo",
+    where: "Crunchyroll",
+    trailer: "https://www.youtube.com/embed/Em8z7UUoEMU",
+    characters: ["Aqua", "Ruby", "Ai Hoshino", "Kana Arima"],
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Mushoku Tensei: Jobless Reincarnation Temporada 3",
+    synopsis: "Rudeus Greyrat avança em sua vida reencarnada — lidando com crescimento pessoal, magia e relacionamentos em um mundo de fantasia.",
+    cover: "https://static.wikia.nocookie.net/dublagem/images/e/e4/Mushoku_Tensei-_Jobless_ReincarnatioN.jpg/revision/latest?cb=20210810171227&path-prefix=pt-br",
+    premiere: "Abril de 2026",
+    genres: ["Fantasia", "Aventura", "Isekai"],
+    studio: "Studio Bind",
+    where: "Crunchyroll",
+    trailer: "https://www.youtube.com/embed/O0j2BglbQD0",
+    characters: ["Rudeus Greyrat", "Sylphiette", "Eris Boreas Greyrat"],
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "Fire Force Temporada 3 - Parte 2 (Final)",
+    synopsis: "Shinra e a Brigada de Incêndio concluem a luta contra os infernais e o culto do Evangelista — revelando segredos sobre o mundo.",
+    cover: "https://a.storyblok.com/f/178900/1000x1500/187c57b286/fire-force-season-3-base-assets-2x3.png/m/filters:quality(95)format(webp)",
+    premiere: "Janeiro de 2026",
+    genres: ["Ação", "Ficção Científica", "Shonen"],
+    studio: "David Production",
+    where: "Crunchyroll",
+    trailer: "https://www.youtube.com/embed/LJDS9ZVCsys",
+    characters: ["Shinra Kusakabe", "Arthur Boyle", "Iris", "Tamaki Kotatsu"],
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "Black Clover Continuação (Temporada 5 ou Temporada 2)",
+    synopsis: "Asta e os Cavaleiros Mágicos enfrentam ameaças no Reino de Spade — explorando origens demoníacas e batalhas mágicas intensas.",
+    cover: "https://a.storyblok.com/f/178900/750x1111/b9e1c2f9a7/a0055b1a7454869c56e92d633a6388b61670405134_main.jpg/m/filters:quality(95)format(webp)",
+    premiere: "2026 (sem data confirmada)",
+    genres: ["Ação", "Fantasia", "Shonen"],
+    studio: "Studio Pierrot",
+    where: "Crunchyroll",
+    trailer: "https://www.youtube.com/embed/7bb0It1iFaw",
+    characters: ["Asta", "Yuno", "Noelle Silva", "Yami Sukehiro"],
+    featured: false,
+  },
+  {
+    id: 9,
+    title: "JoJo's Bizarre Adventure: Steel Ball Run",
+    synopsis: "Em um universo alternativo, Johnny Joestar e Gyro Zeppeli competem em uma corrida de cavalos pelos EUA — usando Stands em uma caçada por relíquias sagradas.",
+    cover: "https://a.storyblok.com/f/178900/708x1000/5b30d41128/steel-ball-run-jojo-s-bizarre-adventure-teaser-visual.jpg/m/filters:quality(95)format(webp)",
+    premiere: "2026 (possivelmente março)",
+    genres: ["Ação", "Aventura", "Sobrenatural"],
+    studio: "David Production",
+    where: "Netflix",
+    trailer: "https://www.youtube.com/embed/UIwBcXV29aA",
+    characters: ["Johnny Joestar", "Gyro Zeppeli", "Diego Brando"],
+    featured: false,
+  },
+  {
+    id: 10,
+    title: "Fate/Strange Fake",
+    synopsis: "Uma Guerra do Santo Graal falsa nos EUA envolve Servos e Mestres em batalhas caóticas — questionando o que é real ou falso no universo Fate.",
+    cover: "https://m.media-amazon.com/images/M/MV5BMzIyZDNmMmUtMGZkNC00MTJjLTlmYzUtODllYWM5NDQ4YTJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    premiere: "3 de janeiro de 2026",
+    genres: ["Ação", "Fantasia", "Sobrenatural"],
+    studio: "A-1 Pictures",
+    where: "Crunchyroll (seguindo Fate series)",
+    trailer: "https://www.youtube.com/embed/D3ZU1CqKIdM",
+    characters: ["Ayaka Sajyou", "Sigma", "Flat Escardos"],
     featured: false,
   },
 ];
@@ -97,6 +201,30 @@ function initFilters() {
   filterStudio.innerHTML = `<option value="all">Todos</option>` + studios.map((s) => `<option value="${s}">${s}</option>`).join("");
 }
 
+// Renderizar destaque dinamicamente
+function renderDestaque() {
+  const featured = articles.find((a) => a.featured);
+  if (featured) {
+    document.getElementById("destaqueTitle").textContent = featured.title;
+    document.getElementById("destaqueSynopsis").textContent = featured.synopsis;
+    const destaqueCover = document.getElementById("destaqueCover");
+    destaqueCover.style.backgroundImage = `url('${featured.cover}')`;
+    destaqueCover.setAttribute("aria-label", `Capa de ${featured.title}`);
+    const metaUl = document.querySelector(".destaque-meta");
+    metaUl.innerHTML = `
+      <li><strong>Estúdio:</strong> ${featured.studio}</li>
+      <li><strong>Data de estreia:</strong> ${featured.premiere}</li>
+      <li><strong>Plataforma:</strong> ${featured.where}</li>
+      <li><strong>Gêneros:</strong> ${featured.genres.join(", ")}</li>
+    `;
+    const iframe = destaqueTrailer.querySelector("iframe");
+    iframe.title = `Trailer ${featured.title}`;
+  } else {
+    // Caso não haja destaque, esconder seção ou mostrar mensagem
+    document.getElementById("destaque").hidden = true;
+  }
+}
+
 // Renderizar artigos no grid
 function renderArticles() {
   const start = (currentPage - 1) * articlesPerPage;
@@ -139,6 +267,43 @@ function renderArticles() {
   });
 }
 
+// Função para parsear datas de premiere
+function getPremiereDate(str) {
+  const lowerStr = str.toLowerCase();
+  const monthMap = {
+    'janeiro': 0,
+    'fevereiro': 1,
+    'março': 2,
+    'abril': 3,
+    'maio': 4,
+    'junho': 5,
+    'julho': 6,
+    'agosto': 7,
+    'setembro': 8,
+    'outubro': 9,
+    'novembro': 10,
+    'dezembro': 11,
+  };
+  let year = 2026;
+  let month = 0;
+  let day = 1;
+
+  const yearMatch = lowerStr.match(/(\d{4})/);
+  if (yearMatch) year = parseInt(yearMatch[1]);
+
+  const monthKey = Object.keys(monthMap).find(m => lowerStr.includes(m));
+  if (monthKey) month = monthMap[monthKey];
+
+  if (lowerStr.includes('outono')) month = 8; // Setembro aproximado
+  if (lowerStr.includes('sem data confirmada')) month = 0;
+  if (lowerStr.includes('possivelmente março')) month = 2;
+
+  const dayMatch = lowerStr.match(/(\d+) de/);
+  if (dayMatch) day = parseInt(dayMatch[1]);
+
+  return new Date(year, month, day).getTime();
+}
+
 // Filtrar e ordenar artigos
 function updateArticles() {
   let result = [...articles];
@@ -170,8 +335,8 @@ function updateArticles() {
   // Ordenação
   const sort = sortSelect.value;
   result.sort((a, b) => {
-    if (sort === "newest") return b.premiere - a.premiere;
-    if (sort === "oldest") return a.premiere - b.premiere;
+    if (sort === "newest") return getPremiereDate(b.premiere) - getPremiereDate(a.premiere);
+    if (sort === "oldest") return getPremiereDate(a.premiere) - getPremiereDate(b.premiere);
     if (sort === "title_az") return a.title.localeCompare(b.title);
     if (sort === "title_za") return b.title.localeCompare(a.title);
     return 0;
@@ -197,7 +362,10 @@ backToTop.addEventListener("click", () => {
 abrirTrailerBtn.addEventListener("click", () => {
   destaqueTrailer.hidden = false;
   const iframe = destaqueTrailer.querySelector("iframe");
-  iframe.src = articles.find((a) => a.featured)?.trailer || "";
+  const featured = articles.find((a) => a.featured);
+  if (featured) {
+    iframe.src = featured.trailer;
+  }
 });
 fecharTrailerBtn.addEventListener("click", () => {
   destaqueTrailer.hidden = true;
@@ -249,6 +417,7 @@ adminLogoutBtn.addEventListener("click", () => {
 });
 adminForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  articles.forEach((a) => (a.featured = false)); // Garante apenas um destaque
   const newArticle = {
     id: articles.length + 1,
     title: document.getElementById("adminTitleField").value,
@@ -265,6 +434,7 @@ adminForm.addEventListener("submit", (e) => {
   articles.push(newArticle);
   initFilters();
   updateArticles();
+  renderDestaque();
   adminForm.reset();
   adminModal.hidden = true;
   showToast("Artigo salvo com sucesso!");
@@ -284,6 +454,7 @@ function revealOnScroll() {
 // Inicialização
 initTheme();
 initFilters();
+renderDestaque();
 updateArticles();
 window.addEventListener("scroll", revealOnScroll);
 

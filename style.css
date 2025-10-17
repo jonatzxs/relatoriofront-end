@@ -1,5 +1,6 @@
 /* style.css - Paleta principal: vermelho
    Atualizado com modo dark aprimorado, responsividade e animações profissionais.
+   Alterações: logo ajustada para 50px; texto do destaque branco no modo dark.
    Salvar como style.css no mesmo diretório do index.html.
 */
 
@@ -129,7 +130,7 @@ body {
   text-decoration: none;
 }
 .logo {
-  height: 44px;
+  height: 50px; /* Alterado de 44px para 50px */
   width: auto;
   display: block;
   border-radius: 8px;
@@ -249,7 +250,6 @@ body {
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  background-image: url('destaque.jpg'); /* fallback - ajuste com JS/admin */
   min-height: 220px;
   transition: transform var(--transition);
 }
@@ -626,7 +626,6 @@ body[data-theme="dark"] .site-footer {
 }
 body[data-theme="dark"] .site-footer p,
 body[data-theme="dark"] .card p,
-body[data-theme="dark"] .destaque-meta,
 body[data-theme="dark"] .card .meta,
 body[data-theme="dark"] #sobre p {
   color: var(--neutral-300);
@@ -635,6 +634,11 @@ body[data-theme="dark"] .card h3,
 body[data-theme="dark"] .section-title,
 body[data-theme="dark"] #sobre h1 {
   color: var(--dark-text);
+}
+body[data-theme="dark"] .destaque-body h2,
+body[data-theme="dark"] .destaque-body p,
+body[data-theme="dark"] .destaque-meta {
+  color: var(--dark-text); /* Texto do destaque branco no modo dark */
 }
 body[data-theme="dark"] .admin-btn {
   border-color: var(--red-400);

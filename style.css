@@ -579,6 +579,11 @@ input:focus, textarea:focus, select:focus {
   color: var(--neutral-900);
 }
 
+body[data-theme="dark"] .filter-group label,
+body[data-theme="dark"] .checkbox-group label {
+  color: #ffffff;
+}
+
 /* ============================
    Dark theme override
    ============================ */

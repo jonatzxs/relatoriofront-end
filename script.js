@@ -1,6 +1,3 @@
-// script.js - Lógica interativa para o site Nippon X
-// Implementa funcionalidades de tema, busca, filtros, modais, admin e animações
-
 // Base de dados simulada (substitua por API ou banco de dados real)
 let articles = [
   {
@@ -72,7 +69,7 @@ let articles = [
     id: 6,
     title: "Mushoku Tensei: Jobless Reincarnation Temporada 3",
     synopsis: "Rudeus Greyrat avança em sua vida reencarnada — lidando com crescimento pessoal, magia e relacionamentos em um mundo de fantasia.",
-    cover: "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3670470005126522090",
+    cover: "https://gqcanimes.com.br/wp-content/uploads/2024/02/2-parte-da-2-temporada-do-anime-mushoku-tensei-visual-gqca-1-jpg.webp",
     premiere: "Abril de 2026",
     genres: ["Fantasia", "Aventura", "Isekai"],
     studio: "Studio Bind",
@@ -85,7 +82,7 @@ let articles = [
     id: 7,
     title: "Fire Force Temporada 3 - Parte 2 (Final)",
     synopsis: "Shinra e a Brigada de Incêndio concluem a luta contra os infernais e o culto do Evangelista — revelando segredos sobre o mundo.",
-    cover: "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3705823249097986823",
+    cover: "https://animeflix.com.br/wp-content/uploads/2025/10/Fie-Force-temporada-3-visual.jpg",
     premiere: "Janeiro de 2026",
     genres: ["Ação", "Ficção Científica", "Shonen"],
     studio: "David Production",
